@@ -419,7 +419,7 @@
                 };
                 if (typeof savedGame.upgradePurchased !== "undefined") {
                     for (i = 0; i < savedGame.upgradePurchased.length; i++) {
-                        upgrade.purchase[i] = savedGame.upgradePurchased[i];
+                        upgrade.purchased[i] = savedGame.upgradePurchased[i];
                     }
                 }
             }
@@ -439,10 +439,10 @@
         }, false);
 
         window.onload = function () {
-            loadGame();
             display.updateScore();
             display.updateUpgrades();
             display.updateShop();
+            loadGame();
         };
 
         setInterval(function () {
